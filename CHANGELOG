@@ -1,0 +1,6 @@
+powermod (2-1) buster; urgency=medium
+
+  * Created new standalone repository from the powermod v.1 part of spart-relay-actuator-1-1 
+  * Changed order of header columns so that GND is on the outside
+
+ -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Wed, 26 Jan 2022 13:59:16 +0100
