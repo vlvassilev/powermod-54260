@@ -1,3 +1,9 @@
+powermod (2-2) buster; urgency=medium
+
+  * Added powermod.kicad_pcb
+
+ -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Tue, 08 Feb 2022 00:04:50 +0100
+
 powermod (2-1) buster; urgency=medium
 
   * Created new standalone repository from the powermod v.1 part of spart-relay-actuator-1-1 
