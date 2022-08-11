@@ -1,12 +1,5 @@
-powermod (2-2) buster; urgency=medium
+powermod-tps54202 (1.0) bullseye; urgency=medium
 
-  * Added powermod.kicad_pcb
+  * Initial
 
- -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Tue, 08 Feb 2022 00:04:50 +0100
-
-powermod (2-1) buster; urgency=medium
-
-  * Created new standalone repository from the powermod v.1 part of spart-relay-actuator-1-1 
-  * Changed order of header columns so that GND is on the outside
-
- -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Wed, 26 Jan 2022 13:59:16 +0100
+ -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Thu, 11 Aug 2022 22:10:48 +0200
