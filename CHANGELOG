@@ -1,3 +1,10 @@
+powermod-tps54202 (1.1) bullseye; urgency=medium
+
+  * Renamed parts to match the original TI reference design
+  * Fixed bug 49.9 ohm resistor was 49.9K
+
+ -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Sat, 31 Dec 2022 01:52:11 +0100
+
 powermod-tps54202 (1.0) bullseye; urgency=medium
 
   * Initial
