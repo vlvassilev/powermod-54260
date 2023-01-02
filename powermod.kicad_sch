@@ -5,8 +5,8 @@
   (paper "A4")
 
   (title_block
-    (title "powermod-tps54202-1.0")
-    (rev "1")
+    (title "powermod-tps54202-1.3")
+    (date "2023-01-02")
     (company "Lightside Instruments AS")
   )
 
@@ -456,6 +456,9 @@
   (junction (at 95.25 53.34) (diameter 0) (color 0 0 0 0)
     (uuid 61fe293f-6808-4b7f-9340-9aaac7054a97)
   )
+  (junction (at 29.21 29.21) (diameter 0) (color 0 0 0 0)
+    (uuid 63aa4ad5-10b4-4fb0-99dd-f1440c3734c0)
+  )
   (junction (at 171.45 27.94) (diameter 0) (color 0 0 0 0)
     (uuid 6a45789b-3855-401f-8139-3c734f7f52f9)
   )
@@ -517,6 +520,10 @@
     (uuid e857610b-4434-4144-b04e-43c1ebdc5ceb)
   )
 
+  (wire (pts (xy 29.21 29.21) (xy 39.37 29.21))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid 030d53bf-9274-4b6c-9566-bd9dbac89df1)
+  )
   (wire (pts (xy 158.75 33.02) (xy 158.75 35.56))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 03c52831-5dc5-43c5-a442-8d23643b46fb)
@@ -685,7 +692,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid e8314017-7be6-4011-9179-37449a29b311)
   )
-  (wire (pts (xy 22.86 29.21) (xy 39.37 29.21))
+  (wire (pts (xy 22.86 29.21) (xy 29.21 29.21))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid e8c50f1b-c316-4110-9cce-5c24c65a1eaa)
   )
@@ -698,11 +705,16 @@
     (uuid fe8d9267-7834-48d6-a191-c8724b2ee78d)
   )
 
+  (label "SW" (at 64.77 34.29 0)
+    (effects (font (size 1.524 1.524)) (justify left bottom))
+    (uuid 8e132b43-8cf8-49a3-af19-ecec660997d5)
+  )
+
   (global_label "SYS_DCIN" (shape input) (at 24.13 26.67 0) (fields_autoplaced)
     (effects (font (size 1.524 1.524)) (justify left))
     (uuid 68e09be7-3bbc-4443-a838-209ce20b2bef)
-    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 0 0 0)
-      (effects (font (size 1.27 1.27)) hide)
+    (property "Intersheet References" "${INTERSHEET_REFS}" (id 0) (at 37.6595 26.5748 0)
+      (effects (font (size 1.524 1.524)) (justify left) hide)
     )
   )
   (global_label "SYS_DCIN" (shape input) (at 137.16 20.32 180) (fields_autoplaced)
@@ -1141,6 +1153,41 @@
     (pin "1" (uuid ba71da41-3466-46af-bca6-1b7f1376135d))
   )
 
+  (symbol (lib_id "Device:C") (at 29.21 33.02 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 099ecb97-3df4-4f7a-ae82-6f5f72579f60)
+    (property "Reference" "C2" (id 0) (at 25.4 30.48 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "0.1uF" (id 1) (at 22.86 35.56 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (id 2) (at 30.1752 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 29.21 33.02 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 1538e725-d385-4b5a-8db8-b54abefda181))
+    (pin "2" (uuid 04d90da3-abb8-4261-a30e-0573c14c30cb))
+  )
+
+  (symbol (lib_id "power:GND") (at 29.21 36.83 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 2be4fe5b-5422-49a9-a627-45e4e5aee550)
+    (property "Reference" "#PWR0103" (id 0) (at 29.21 43.18 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (id 1) (at 29.337 41.2242 0))
+    (property "Footprint" "" (id 2) (at 29.21 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (id 3) (at 29.21 36.83 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid be1b7ab0-e3a6-4898-8279-2d3148daebc5))
+  )
+
   (sheet_instances
     (path "/" (page "1"))
   )
@@ -1151,6 +1198,9 @@
     )
     (path "/00000000-0000-0000-0000-000062fa4df5"
       (reference "#PWR0102") (unit 1) (value "GND") (footprint "")
+    )
+    (path "/2be4fe5b-5422-49a9-a627-45e4e5aee550"
+      (reference "#PWR0103") (unit 1) (value "GND") (footprint "")
     )
     (path "/00000000-0000-0000-0000-000061f6fa25"
       (reference "#PWR0122") (unit 1) (value "GND") (footprint "")
@@ -1178,6 +1228,9 @@
     )
     (path "/00000000-0000-0000-0000-000061a28d66"
       (reference "C1") (unit 1) (value "10uF") (footprint "Capacitor_SMD:C_0603_1608Metric")
+    )
+    (path "/099ecb97-3df4-4f7a-ae82-6f5f72579f60"
+      (reference "C2") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
     )
     (path "/00000000-0000-0000-0000-000061a47b26"
       (reference "C3") (unit 1) (value "0.1uF") (footprint "Capacitor_SMD:C_0402_1005Metric")
