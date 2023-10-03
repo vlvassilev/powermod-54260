@@ -1,3 +1,10 @@
+powermod-tps54202 (3.0) jammy; urgency=medium
+
+  * Increased width with 2mm and added 2x7 connectors instead the 2x6
+  * Left disconnected J1.1, J2.1, J2.2 for future use as control interface I2C or SPI
+
+ -- Vladimir Vassilev <vladimir@lightside-instruments.com>  Tue, 26 Sep 2023 14:51:23 +0200
+
 powermod-tps54202 (2.0) jammy; urgency=medium
 
   * Changed the function of the first of the GND pins to EN input

@@ -10,4 +10,4 @@ R3,1,,Resistor_SMD:R_0402_1005Metric,13.3K,,,,,AC0402FR-0713K3L,
 C2;C3,2,,Capacitor_SMD:C_0402_1005Metric,0.1uF,,,,,CC0402KRX7R9BB101,
 C6,1,,Capacitor_SMD:C_0402_1005Metric,75pF,,,,,CC0402KRX7R9BB101,100pF not 75
 R4,1,,Capacitor_SMD:C_0402_1005Metric,511K,,,,,0402WGF5113TCE,
-J1;J2,2,,Connector_PinHeader_2.00mm:PinHeader_2x06_P2.00mm_Vertical_SMD,Conn_02x06_Odd_Even,,,,,X4621WVS-2x06I-C40D64,
+J1;J2,2,,Connector_PinHeader_2.00mm:PinHeader_2x07_P2.00mm_Vertical_SMD,Conn_02x07_Odd_Even,,,,,X4621WVS-2x07I-C40D64,
