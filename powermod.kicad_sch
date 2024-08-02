@@ -4598,7 +4598,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "e962c3c6-8991-4a36-a5d2-f960f4e66fc6")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 63.5 27.94 0)
 			(effects
 				(font
@@ -4674,7 +4674,7 @@
 		(instances
 			(project "powermod"
 				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
