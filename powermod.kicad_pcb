@@ -6290,6 +6290,66 @@
 		(uuid "a064406a-7461-4df5-9814-44deabac613d")
 	)
 	(gr_line
+		(start 25.5 42)
+		(end 26.5 42)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "05f2290e-a041-4919-ba49-1a4ca55f157e")
+	)
+	(gr_line
+		(start 25.5 41.5)
+		(end 24 42)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "16d9a3ec-e1ba-4728-8618-41ad01152caa")
+	)
+	(gr_line
+		(start 25.5 42.5)
+		(end 24 42)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "3f1235bc-0214-4641-b740-8beb401b7c5c")
+	)
+	(gr_line
+		(start 25.5 42)
+		(end 25.5 42.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "56dad304-cb46-47e3-9e22-abdedea08d9d")
+	)
+	(gr_line
+		(start 25.5 42)
+		(end 25.5 41.5)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "b6b23669-1396-49f8-aa15-bd8a49bf208b")
+	)
+	(gr_line
+		(start 24 42)
+		(end 25.5 42)
+		(stroke
+			(width 0.15)
+			(type default)
+		)
+		(layer "B.SilkS")
+		(uuid "f26164b4-d1f1-4ab0-a9ab-a4357d0af4d9")
+	)
+	(gr_line
 		(start 16 57)
 		(end 43 57)
 		(stroke
@@ -6328,6 +6388,18 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "e67b9f8c-019b-4145-98a4-96545f6bb128")
+	)
+	(gr_text "Enable pin"
+		(at 30.775883 42.228558 0)
+		(layer "B.SilkS")
+		(uuid "9e764465-a534-40ce-999f-0d879675df75")
+		(effects
+			(font
+				(size 0.5 0.5)
+				(thickness 0.125)
+			)
+			(justify left bottom mirror)
+		)
 	)
 	(gr_text "Input"
 		(at 17.5 49 -90)
