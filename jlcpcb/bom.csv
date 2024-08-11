@@ -1,12 +1,12 @@
 Comment,Designator,Footprint,JLCPCB Part #（optional）,
 TPS54260DGQ,U1,Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP2.2x3.1mm_Mask1.83x1.89mm_ThermalVias,,TPS54260DGQ
-2.2uF,"C1, C2",Capacitor_SMD:C_0603_1608Metric,,
-10uH,L1,Inductor_SMD:L_Taiyo-Yuden_MD-5050,,
+22uF 2201010609TR,C1,Capacitor_SMD:C_Elec_6.3x7.7,,
+15uH,L1,Inductor_SMD:L_Taiyo-Yuden_MD-5050,,
 100pF,C5,Capacitor_SMD:C_0805_2012Metric,,
 56.2K,R5,Resistor_SMD:R_0402_1005Metric,,
 0,R6,Resistor_SMD:R_0402_1005Metric,C242160,ERJ2GE0R00X
-52.5K,R2,Resistor_SMD:R_0402_1005Metric,,
-10K,R3,Resistor_SMD:R_0402_1005Metric,,
+59K,R2,Resistor_SMD:R_0402_1005Metric,,
+11K,R3,Resistor_SMD:R_0402_1005Metric,,
 332K,R4,Resistor_SMD:R_0402_1005Metric,,
 0.1uF,C3,Capacitor_SMD:C_0402_1005Metric,C281751,CC0402KRX7R9BB101
 237K,R7,Capacitor_SMD:C_0402_1005Metric,,

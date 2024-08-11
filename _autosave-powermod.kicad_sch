@@ -2633,7 +2633,7 @@
 				)
 			)
 		)
-		(property "Value" "15uH"
+		(property "Value" "10uH"
 			(at 96.52 33.0454 90)
 			(effects
 				(font
@@ -2701,7 +2701,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100pF"
+		(property "Value" "100uF"
 			(at 95.25 41.91 0)
 			(effects
 				(font
@@ -2835,7 +2835,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "59K"
+		(property "Value" "52K"
 			(at 119.38 44.45 0)
 			(effects
 				(font
@@ -4387,7 +4387,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "237K"
+		(property "Value" "43K"
 			(at 40.64 54.61 0)
 			(effects
 				(font
@@ -4548,7 +4548,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "29K"
+		(property "Value" "9K"
 			(at 50.8 59.69 0)
 			(effects
 				(font
