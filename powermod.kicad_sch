@@ -3776,7 +3776,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "4700pF"
+		(property "Value" "51.1nF"
 			(at 50.8 68.58 0)
 			(effects
 				(font
@@ -3845,7 +3845,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "33pF"
+		(property "Value" "14pF"
 			(at 58.42 62.23 0)
 			(effects
 				(font
