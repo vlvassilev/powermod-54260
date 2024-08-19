@@ -1,0 +1,51 @@
+* TPS54260 DC-DC Converter Simulation
+* EN PH RT PWRGD COMP VIN VSENSE BOOT SS_TR GND
+
+.include "./tps54260_trans.lib"
+.option TEMP=27C
+
+* Power Supply Definitions
+Vpower VIN GND 40
+
+* Nodes
+X1 EN PH RT PWRGD COMP VIN VSENSE BOOT SS_TR GND TPS54260_TRANS
+R7 GND RT 43k
+R4 VIN EN 332k
+R5 GND EN 56.2k
+C9 GND COMP 14p
+R8 C8 COMP 9k
+C7 GND SS_TR 0.01u
+C8 GND C8 51.1n
+C1 VIN GND 22u
+C5 +5V GND 100u
+L1 PH +5V 10u
+R2 +5V VSENSE 52k
+R3 VSENSE GND 11k
+C3 PH BOOT 0.1u
+D1 GND PH B360
+
+* Load
+R10 +5V GND 220
+
+* B360
+.model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
+
+* Simulation Commands
+.tran 1000p 100us
+
+.control
+ run
+ plot I(+5V)
+ plot V(+5V) 
+ plot V(VIN) 
+ plot V(VSENSE) 
+ plot V(PWRGD)
+ plot V(SS_TR)
+ plot V(PH)
+ plot V(BOOT)
+ plot V(COMP)
+ plot V(RT)
+ plot V(EN)
+.endc
+
+.end
