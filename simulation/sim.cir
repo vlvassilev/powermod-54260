@@ -5,7 +5,7 @@
 .option TEMP=27C
 
 * Power Supply Definitions
-Vpower VIN GND 40
+Vpower VIN GND 60
 
 * Nodes
 X1 EN PH RT PWRGD COMP VIN VSENSE BOOT SS_TR GND TPS54260_TRANS
@@ -24,18 +24,17 @@ R3 VSENSE GND 11k
 C3 PH BOOT 0.1u
 D1 GND PH B360
 
-* Load
-R10 +5V GND 220
+* Load powersupply should be able to do 2.5 A
+Rload +5V GND 220
 
 * B360
 .model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
 
 * Simulation Commands
-.tran 1000p 100us
+.tran 1000us 2ms
 
 .control
  run
- plot I(+5V)
  plot V(+5V) 
  plot V(VIN) 
  plot V(VSENSE) 
