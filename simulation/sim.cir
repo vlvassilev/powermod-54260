@@ -3,6 +3,7 @@
 
 .include "./tps54260_trans.lib"
 .option TEMP=27C
+.option interp
 
 * Power Supply Definitions
 Vpower VIN GND 60
@@ -31,10 +32,23 @@ Rload +5V GND 220
 .model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
 
 * Simulation Commands
-.tran 1000us 2ms
+.tran 1us 3ms 0ms
+
+.save +5V
+.save VIN
+.save VSENSE
+.save PWRGD
+.save SS_TR
+.save PH
+.save BOOT
+.save COMP
+.save RT
+.save EN
+.save @rload[i]
 
 .control
  run
+
  plot V(+5V) 
  plot V(VIN) 
  plot V(VSENSE) 
@@ -45,6 +59,9 @@ Rload +5V GND 220
  plot V(COMP)
  plot V(RT)
  plot V(EN)
+ plot @rload[i]
 .endc
 
 .end
+
+* Killedence value :  1.68301e-03
