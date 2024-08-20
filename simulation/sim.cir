@@ -26,13 +26,13 @@ C3 PH BOOT 0.1u
 D1 GND PH B360
 
 * Load powersupply should be able to do 2.5 A
-Rload +5V GND 220
+Rload +5V GND 2
 
 * B360
 .model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
 
 * Simulation Commands
-.tran 1us 3ms 0ms
+.tran 1us 6ms 0ms
 
 .save +5V
 .save VIN
