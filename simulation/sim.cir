@@ -10,7 +10,7 @@ Vpower VIN GND 60
 
 * Nodes
 X1 EN PH RT PWRGD COMP VIN VSENSE BOOT SS_TR GND TPS54260_TRANS
-R7 GND RT 43k
+R7 GND RT 240k
 R4 VIN EN 332k
 R5 GND EN 56.2k
 C9 GND COMP 14p
@@ -19,7 +19,7 @@ C7 GND SS_TR 0.01u
 C8 GND C8 51.1n
 C1 VIN GND 22u
 C5 +5V GND 100u
-L1 PH +5V 10u
+L1 PH +5V 15u
 R2 +5V VSENSE 52k
 R3 VSENSE GND 11k
 C3 PH BOOT 0.1u
@@ -32,34 +32,39 @@ Rload +5V GND 2
 .model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
 
 * Simulation Commands
-.tran 1us 6ms 0ms
+.tran 1ns 6ms 0ms
 
 .save +5V
-.save VIN
-.save VSENSE
-.save PWRGD
-.save SS_TR
+* .save VIN
+* .save VSENSE
+* .save PWRGD
+* .save SS_TR
 .save PH
-.save BOOT
-.save COMP
-.save RT
-.save EN
+* .save BOOT
+* .save COMP
+* .save RT
+* .save EN
 .save @rload[i]
+.save @L1[i]
 
 .control
  run
 
  plot V(+5V) 
- plot V(VIN) 
- plot V(VSENSE) 
- plot V(PWRGD)
- plot V(SS_TR)
+* plot V(VIN) 
+* plot V(VSENSE) 
+* plot V(PWRGD)
+* plot V(SS_TR)
  plot V(PH)
- plot V(BOOT)
- plot V(COMP)
- plot V(RT)
- plot V(EN)
+* plot V(BOOT)
+* plot V(COMP)
+* plot V(RT)
+* plot V(EN)
  plot @rload[i]
+ plot @L1[i]
+
+ write sim.raw all
+
 .endc
 
 .end
