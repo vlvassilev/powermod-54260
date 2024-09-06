@@ -1,0 +1,67 @@
+
+Run simulation:
+
+ngspice sim.cir
+...
+ngspice 3 -> write sim.raw all
+
+
+Check output:
+
+user@pc:~/powermod-54260/simulation$ head -n 30 sim.raw
+Title: * tps54260 dc-dc converter simulation
+Date: Wed Sep  4 09:51:48  2024
+Plotname: Transient Analysis
+Flags: real
+No. Variables: 13
+No. Points: 11
+Variables:
+	0	time	time
+	1	v(+5v)	voltage
+	2	i(@l1[i])	current
+	3	i(@rload[i])	current
+	4	v(boot)	voltage
+	5	v(comp)	voltage
+	6	v(en)	voltage
+	7	v(ph)	voltage
+	8	v(pwrgd)	voltage
+	9	v(rt)	voltage
+	10	v(ss_tr)	voltage
+	11	v(vin)	voltage
+	12	v(vsense)	voltage
+Values:
+ 0	0.000000000000000e+00
+	1.738716421792220e-01
+	1.566678009445949e+00
+	8.693582108961101e-02
+	5.633868917206008e+00
+	4.937482474151949e-01
+	5.064910748815294e+00
+	-4.003878601549906e-01
+	0.000000000000000e+00
+...
+
+
+Load in octave and plotting i(@l1[i]) :
+
+user@pc:~/powermod-54260/simulation$ octave-cli
+...
+octave:1> k=spice_readfile("sim.raw");
+warning: using continuation marker \ outside of double quoted strings was deprecated in version 7 and will be removed from a future version of Octave, use ... instead; near line 162 of file '/home/vladimir/lsi/code/powermod-54260/simulation/spice_readfile.m'
+
+s =
+
+  scalar structure containing the fields:
+
+    no_points = 0
+    no_variables = 0
+    dimensions = 0
+    commands = {}(0x0)
+    options = {}(0x0)
+    title = * tps54260 dc-dc converter simulation
+    date = Wed Sep  4 09:51:48  2024
+    plotname = Transient Analysis
+
+octave:2> plot(k(:,0))
+error: k(_,0): subscripts must be either integers 1 to (2^63)-1 or logicals
+octave:3> plot(k(:,3))
