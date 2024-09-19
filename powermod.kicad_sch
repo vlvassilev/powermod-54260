@@ -5,7 +5,7 @@
 	(uuid "4d4b0fcd-2c79-4fc3-b5fa-7a0741601344")
 	(paper "A4")
 	(title_block
-		(title "powermod-tps54202-3.0")
+		(title "powermod-tps54260-1.2")
 		(company "Lightside Instruments AS")
 	)
 	(lib_symbols
@@ -2251,6 +2251,16 @@
 	)
 	(wire
 		(pts
+			(xy 16.51 30.48) (xy 26.67 30.48)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab62f2be-b6d8-4966-8d36-affa6e25f0be")
+	)
+	(wire
+		(pts
 			(xy 52.07 57.15) (xy 52.07 60.96)
 		)
 		(stroke
@@ -4212,7 +4222,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
 			(at 27.6352 38.1 0)
 			(effects
 				(font
@@ -4249,6 +4259,71 @@
 			(project ""
 				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
 					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 16.51 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "86043bce-01ed-44ef-a0ca-90399739ff51")
+		(property "Reference" "#PWR06"
+			(at 16.51 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 16.637 42.4942 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 16.51 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 16.51 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 16.51 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "104f6d36-58c3-4d14-879e-917874451a64")
+		)
+		(instances
+			(project "powermod"
+				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
+					(reference "#PWR06")
 					(unit 1)
 				)
 			)
@@ -4446,6 +4521,76 @@
 			(project "powermod"
 				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
 					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 16.51 34.29 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "c43c0344-831b-4c55-bf74-40f09745695f")
+		(property "Reference" "C4"
+			(at 20.32 33.0199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4.7uF"
+			(at 20.32 35.5599 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 17.4752 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 16.51 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 16.51 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5abcc767-41a5-4460-879c-7cf002bdc251")
+		)
+		(pin "1"
+			(uuid "430b49a8-8de5-4beb-95ac-a2c3874685bb")
+		)
+		(instances
+			(project "powermod"
+				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
+					(reference "C4")
 					(unit 1)
 				)
 			)

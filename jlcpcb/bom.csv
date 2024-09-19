@@ -1,18 +1,19 @@
-Comment,Designator,Footprint,JLCPCB Part #（optional）,
-TPS54260DGQ,U1,Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP2.2x3.1mm_Mask1.83x1.89mm_ThermalVias,,TPS54260DGQ
-22uF 2201010609TR,C1,Capacitor_SMD:C_Elec_6.3x7.7,,
-15uH,L1,Inductor_SMD:L_Taiyo-Yuden_MD-5050,,
-100pF,C5,Capacitor_SMD:C_0805_2012Metric,,
-56.2K,R5,Resistor_SMD:R_0402_1005Metric,,
-0,R6,Resistor_SMD:R_0402_1005Metric,C242160,ERJ2GE0R00X
-59K,R2,Resistor_SMD:R_0402_1005Metric,,
-11K,R3,Resistor_SMD:R_0402_1005Metric,,
-332K,R4,Resistor_SMD:R_0402_1005Metric,,
-0.1uF,C3,Capacitor_SMD:C_0402_1005Metric,C281751,CC0402KRX7R9BB101
-237K,R7,Capacitor_SMD:C_0402_1005Metric,,
-Conn_02x06_Odd_Even,"J1,J2",Connector_PinHeader_2.00mm:PinHeader_2x07_P2.00mm_Vertical_SMD,C917612,X4621WVS-2x07I-C40D64
-29K,R8,Resistor_SMD:R_0402_1005Metric,,
-33pF,C9,Capacitor_SMD:C_0402_1005Metric,,
-4700pF,C8,Capacitor_SMD:C_0402_1005Metric,,
-B360,D1,Diode_SMD:D_SMC,,B360
-0.01uF,C7,Capacitor_SMD:C_0402_1005Metric,,
+Comment,Designator,Footprint,JLCPCB Part #
+4.7uF,C1,,C437566
+4.7uF,C4,,C437566
+0.1uF,C3,Capacitor_SMD:C_0402_1005Metric,C1525
+47uF,C5,Capacitor_SMD:C_0805_2012Metric,C109461
+47uF,C2,Capacitor_SMD:C_0805_2012Metric,C109461
+0.01uF,C7,Capacitor_SMD:C_0402_1005Metric,C295917
+4700pF,C8,Capacitor_SMD:C_0402_1005Metric,C77024
+33pF,C9,Capacitor_SMD:C_0402_1005Metric,C1562
+B360,D1,Diode_SMD:D_SMC,C110487
+15uH,L1,Inductor_SMD:L_Taiyo-Yuden_MD-5050,C44888
+59K,R2,Resistor_SMD:R_0402_1005Metric,C321568
+11K,R3,Resistor_SMD:R_0402_1005Metric,C226682
+332K,R4,Resistor_SMD:R_0402_1005Metric,C144767
+56.2K,R5,Resistor_SMD:R_0402_1005Metric,C208917
+0,R6,Resistor_SMD:R_0402_1005Metric,C242160
+237K,R7,Capacitor_SMD:C_0402_1005Metric,C144777
+29K,R8,Resistor_SMD:R_0402_1005Metric,C352437
+TPS54260DGQ,U1,Package_SO:MSOP-10-1EP_3x3mm_P0.5mm_EP2.2x3.1mm_Mask1.83x1.89mm_ThermalVias,C51800

@@ -1,8 +1,14 @@
-powermod-tps54260 (1.1) UNRELEASED; urgency=medium
+powermod-tps54260 (1.2) noble; urgency=medium
+
+  * Changed input capacitors footprints from 0805 to 1210
+
+ -- joar <contact@joar.me>  Thu, 19 Sep 2024 23:59:45 +0200
+
+powermod-tps54260 (1.1) noble; urgency=medium
 
   * Changed input capacitor from electrolytic to ceramic
   * Changed output capacitor to two 47uF ceramic capacitors
   * Updated clk pin resistor value to select 500kHz 
   * Refactored inductor switching current path
 
- -- joar <contact@joar.me>  Thu, 19 Sep 2024 22:47:50 +0200
+ -- joar <contact@joar.me>  Thu, 19 Sep 2024 23:57:02 +0200
