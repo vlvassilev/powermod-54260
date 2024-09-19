@@ -1686,6 +1686,12 @@
 		(uuid "2fb1fa3f-67b4-4443-bb42-00e0b50000f4")
 	)
 	(junction
+		(at 26.67 30.48)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "33aa3f7e-d0c8-4050-905a-0cacd233de19")
+	)
+	(junction
 		(at 43.18 30.48)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1696,6 +1702,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "3aaee4c4-dbf7-49a5-a620-9465d8cc3ae7")
+	)
+	(junction
+		(at 109.22 35.56)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "5362e9ed-d419-4d1c-8f4b-e02cb18be4e3")
 	)
 	(junction
 		(at 186.69 35.56)
@@ -1792,12 +1804,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d4a1d3c4-b315-4bec-9220-d12a9eab51e0")
-	)
-	(junction
-		(at 26.67 30.48)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "d69d1e06-f9e7-4cda-9438-98fc914c0371")
 	)
 	(junction
 		(at 152.4 33.02)
@@ -2065,7 +2071,7 @@
 	)
 	(wire
 		(pts
-			(xy 100.33 35.56) (xy 118.11 35.56)
+			(xy 100.33 35.56) (xy 109.22 35.56)
 		)
 		(stroke
 			(width 0)
@@ -2292,6 +2298,16 @@
 			(type default)
 		)
 		(uuid "c144caa5-b0d4-4cef-840a-d4ad178a2102")
+	)
+	(wire
+		(pts
+			(xy 109.22 35.56) (xy 118.11 35.56)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1b5027d-067a-402c-bb1e-198760a85fd3")
 	)
 	(wire
 		(pts
@@ -2633,7 +2649,7 @@
 				)
 			)
 		)
-		(property "Value" "10uH"
+		(property "Value" "15uH"
 			(at 96.52 33.0454 90)
 			(effects
 				(font
@@ -2701,7 +2717,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "100uF"
+		(property "Value" "47uF"
 			(at 95.25 41.91 0)
 			(effects
 				(font
@@ -3897,6 +3913,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 109.22 43.18 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1f0488b9-eee3-4c4c-bf45-603ec4205380")
+		(property "Reference" "#PWR05"
+			(at 109.22 49.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.347 47.5742 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "9c987ab8-781b-433a-b884-15469d1e9c1d")
+		)
+		(instances
+			(project "powermod"
+				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
+					(reference "#PWR05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 46.99 45.72 90)
 		(unit 1)
@@ -4111,7 +4192,8 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6b7db9c2-b866-4ccf-862f-d2534d122dae")
+		(fields_autoplaced yes)
+		(uuid "7ca48415-c9d6-4317-9739-578233b63b68")
 		(property "Reference" "C1"
 			(at 30.48 33.0199 0)
 			(effects
@@ -4121,8 +4203,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "22uF 2201010609TR"
-			(at 18.288 37.338 0)
+		(property "Value" "4.7uF"
+			(at 30.48 35.5599 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -4130,7 +4212,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_Elec_6.3x7.7"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 27.6352 38.1 0)
 			(effects
 				(font
@@ -4157,11 +4239,11 @@
 				(hide yes)
 			)
 		)
-		(pin "1"
-			(uuid "fe776d35-f047-4edf-a068-f1ab8dcdeeec")
-		)
 		(pin "2"
-			(uuid "90a3a2d4-2b46-49ae-8a7b-d7bd681e77ea")
+			(uuid "a68900ea-908d-485f-984b-27e220b3a464")
+		)
+		(pin "1"
+			(uuid "90c4ed47-64b7-4aa3-8c8c-ade3ee45b29e")
 		)
 		(instances
 			(project ""
@@ -4387,7 +4469,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "43K"
+		(property "Value" "240K"
 			(at 40.64 54.61 0)
 			(effects
 				(font
@@ -4433,6 +4515,75 @@
 			(project "powermod"
 				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
 					(reference "R7")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 109.22 39.37 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dea0c12e-5e23-4c1f-aa84-be2e8213b266")
+		(property "Reference" "C2"
+			(at 104.14 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47uF"
+			(at 104.14 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 110.1852 43.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 109.22 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "50fca495-deb1-424a-95e6-3ce2cb3f5111")
+		)
+		(pin "2"
+			(uuid "bdbb84b7-4f43-449d-8262-38fd029ce4c2")
+		)
+		(instances
+			(project "powermod"
+				(path "/4d4b0fcd-2c79-4fc3-b5fa-7a0741601344"
+					(reference "C2")
 					(unit 1)
 				)
 			)

@@ -10,35 +10,35 @@ Check output:
 
 user@pc:~/powermod-54260/simulation$ head -n 30 sim.raw
 Title: * tps54260 dc-dc converter simulation
-Date: Wed Sep  4 09:51:48  2024
+Date: Fri Sep  6 14:59:30  2024
 Plotname: Transient Analysis
 Flags: real
-No. Variables: 13
-No. Points: 11
+No. Variables: 5
+No. Points: 6000001
 Variables:
 	0	time	time
 	1	v(+5v)	voltage
 	2	i(@l1[i])	current
 	3	i(@rload[i])	current
-	4	v(boot)	voltage
-	5	v(comp)	voltage
-	6	v(en)	voltage
-	7	v(ph)	voltage
-	8	v(pwrgd)	voltage
-	9	v(rt)	voltage
-	10	v(ss_tr)	voltage
-	11	v(vin)	voltage
-	12	v(vsense)	voltage
+	4	v(ph)	voltage
 Values:
  0	0.000000000000000e+00
-	1.738716421792220e-01
-	1.566678009445949e+00
-	8.693582108961101e-02
-	5.633868917206008e+00
-	4.937482474151949e-01
-	5.064910748815294e+00
-	-4.003878601549906e-01
-	0.000000000000000e+00
+	1.520601083746033e-01
+	1.438748980714795e+00
+	7.603005418730167e-02
+	-3.968876981859205e-01
+
+ 1	1.000000000000000e-09
+	1.520737353007567e-01
+	1.438712383731758e+00
+	7.603686765037837e-02
+	-3.968866761110532e-01
+
+ 2	2.000000000000000e-09
+	1.520873617928434e-01
+	1.438675785908501e+00
+	7.604368089642169e-02
+	-3.968856539997464e-01
 ...
 
 
