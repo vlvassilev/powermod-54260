@@ -15,7 +15,7 @@ R4 VIN EN 332k
 R5 GND EN 56.2k
 C9 GND COMP 14p
 R8 C8 COMP 9k
-C7 GND SS_TR 0.01u
+C7 GND SS_TR 0.050u
 C8 GND C8 51.1n
 * 4.7uF x 2
 C1 VIN GND 9.4u
@@ -34,7 +34,7 @@ Rload +5V GND 2
 .model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
 
 * Simulation Commands
-.tran 1ns 10ms 0ms
+.tran 10ns 20ms 0ms
 
 .save +5V
 * .save VIN
