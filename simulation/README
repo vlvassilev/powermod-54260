@@ -65,3 +65,8 @@ s =
 octave:2> plot(k(:,0))
 error: k(_,0): subscripts must be either integers 1 to (2^63)-1 or logicals
 octave:3> plot(k(:,3))
+
+Writing a wav file. 100MHz sampling frequency is probably overkill. Since audiowrite does not support float range has to be determined and the signal divided by range/2. Range (16V) and offset (0V) of the signal go into the name: 
+octave:79> signal=(k(:,2)(1:10:end-1));
+octave:80> audiowrite('powermod-start-100Mhz-0V-16V.wav',signal./(16/2),100000000)
+

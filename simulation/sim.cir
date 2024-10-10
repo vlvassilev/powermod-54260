@@ -17,12 +17,14 @@ C9 GND COMP 14p
 R8 C8 COMP 9k
 C7 GND SS_TR 0.01u
 C8 GND C8 51.1n
-C1 VIN GND 22u
-C5 +5V GND 100u
+* 4.7uF x 2
+C1 VIN GND 9.4u
+*  47uF x 2
+C5 +5V GND 94u
 L1 PH +5V 15u
 R2 +5V VSENSE 52k
 R3 VSENSE GND 11k
-C3 PH BOOT 100p
+C3 PH BOOT 0.1u
 D1 GND PH B360
 
 * Load powersupply should be able to do 2.5 A
@@ -32,7 +34,7 @@ Rload +5V GND 2
 .model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
 
 * Simulation Commands
-.tran 1ns 6ms 0ms
+.tran 1ns 10ms 0ms
 
 .save +5V
 * .save VIN
