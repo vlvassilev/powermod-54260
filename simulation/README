@@ -8,37 +8,37 @@ ngspice 3 -> write sim.raw all
 
 Check output:
 
-user@pc:~/powermod-54260/simulation$ head -n 30 sim.raw
+user@pc:~/lsi/code/powermod-54260/simulation$ head -n 30 sim.raw
 Title: * tps54260 dc-dc converter simulation
-Date: Fri Sep  6 14:59:30  2024
+Date: Fri Oct 11 13:57:31  2024
 Plotname: Transient Analysis
 Flags: real
-No. Variables: 5
-No. Points: 6000001
+No. Variables: 4
+No. Points: 2000001
 Variables:
 	0	time	time
-	1	v(+5v)	voltage
-	2	i(@l1[i])	current
-	3	i(@rload[i])	current
-	4	v(ph)	voltage
+	1	i(@l1[i])	current
+	2	v(ph)	voltage
+	3	v(vout)	voltage
 Values:
  0	0.000000000000000e+00
-	1.520601083746033e-01
-	1.438748980714795e+00
-	7.603005418730167e-02
-	-3.968876981859205e-01
+	1.435565189333252e+00
+	-3.967987878996392e-01
+	1.613970904067401e-01
 
- 1	1.000000000000000e-09
-	1.520737353007567e-01
-	1.438712383731758e+00
-	7.603686765037837e-02
-	-3.968866761110532e-01
+ 1	1.000000000000000e-08
+	1.435193009676569e+00
+	-3.967883816142680e-01
+	1.615411988679060e-01
 
- 2	2.000000000000000e-09
-	1.520873617928434e-01
-	1.438675785908501e+00
-	7.604368089642169e-02
-	-3.968856539997464e-01
+ 2	2.000000000000000e-08
+	1.434820740914200e+00
+	-3.967779714892672e-01
+	1.616852600705034e-01
+
+ 3	3.000000000000000e-08
+	1.434448387558980e+00
+	-3.967675577172333e-01
 ...
 
 
@@ -47,8 +47,6 @@ Load in octave and plotting i(@l1[i]) :
 user@pc:~/powermod-54260/simulation$ octave-cli
 ...
 octave:1> k=spice_readfile("sim.raw");
-warning: using continuation marker \ outside of double quoted strings was deprecated in version 7 and will be removed from a future version of Octave, use ... instead; near line 162 of file '/home/vladimir/lsi/code/powermod-54260/simulation/spice_readfile.m'
-
 s =
 
   scalar structure containing the fields:
@@ -59,14 +57,19 @@ s =
     commands = {}(0x0)
     options = {}(0x0)
     title = * tps54260 dc-dc converter simulation
-    date = Wed Sep  4 09:51:48  2024
+    date = Fri Oct 11 13:57:31  2024
     plotname = Transient Analysis
 
-octave:2> plot(k(:,0))
-error: k(_,0): subscripts must be either integers 1 to (2^63)-1 or logicals
-octave:3> plot(k(:,3))
+octave:2> plot(k(:,3))
 
 Writing a wav file. 100MHz sampling frequency is probably overkill. Since audiowrite does not support float range has to be determined and the signal divided by range/2. Range (16V) and offset (0V) of the signal go into the name: 
-octave:79> signal=(k(:,2)(1:10:end-1));
-octave:80> audiowrite('powermod-start-100Mhz-0V-16V.wav',signal./(16/2),100000000)
+octave:79> signal=(k(:,4)(1:10:end-1));
+octave:80> audiowrite('powermod-voltage-0V-16V-100MHz.wav',signal./(16/2),100000000)
+octave:81> signal=(k(:,2)(1:10:end-1));
+octave:82> audiowrite('powermod-current-0A-16A-100MHz.wav',signal./(16/2),100000000)
 
+... Reading back. Remember to scale the wav file signal read
+
+octave:18> [signal_scaled,Fs] = audioread('powermod-current-0A-16A-100MHz.wav');
+octave:19> signal=signal_scaled*(16/2)
+octave:20> plot(signal)

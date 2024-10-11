@@ -20,15 +20,15 @@ C8 GND C8 51.1n
 * 4.7uF x 2
 C1 VIN GND 9.4u
 *  47uF x 2
-C5 +5V GND 94u
-L1 PH +5V 15u
-R2 +5V VSENSE 52k
+C5 VOUT GND 94u
+L1 PH VOUT 15u
+R2 VOUT VSENSE 52k
 R3 VSENSE GND 11k
 C3 PH BOOT 0.1u
 D1 GND PH B360
 
 * Load powersupply should be able to do 2.5 A
-Rload +5V GND 2
+Rload VOUT GND 2
 
 * B360
 .model B360 D( IS=9.90n RS=14.0m BV=60.0 IBV=500u CJO=464p  M=0.333 N=0.775 TT=7.20n )
@@ -36,7 +36,7 @@ Rload +5V GND 2
 * Simulation Commands
 .tran 10ns 20ms 0ms
 
-.save +5V
+.save VOUT
 * .save VIN
 * .save VSENSE
 * .save PWRGD
@@ -46,13 +46,13 @@ Rload +5V GND 2
 * .save COMP
 * .save RT
 * .save EN
-.save @rload[i]
+* .save @rload[i]
 .save @L1[i]
 
 .control
  run
 
- plot V(+5V) 
+ plot V(VOUT) 
 * plot V(VIN) 
 * plot V(VSENSE) 
 * plot V(PWRGD)
@@ -62,7 +62,7 @@ Rload +5V GND 2
 * plot V(COMP)
 * plot V(RT)
 * plot V(EN)
- plot @rload[i]
+* plot @rload[i]
  plot @L1[i]
 
  write sim.raw all
@@ -70,5 +70,3 @@ Rload +5V GND 2
 .endc
 
 .end
-
-* Killedence value :  1.68301e-03
